@@ -1,0 +1,98 @@
+/* LandingPage.css */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95vh;
+    width: 100%;
+    max-width: 360px; /* Reduced from 425px to create a more compact screen */
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .landing-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 10px; /* Reduced padding */
+  }
+  
+  .landing-title {
+    font-size: 22px; /* Slightly smaller */
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  .landing-text {
+    font-size: 14px; /* Slightly smaller */
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .primary-button {
+    background-color: #6200ee;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px; /* Reduced padding */
+    font-size: 15px; /* Slightly smaller */
+    font-weight: 500;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .secondary-button {
+    background-color: rgba(98, 0, 238, 0.15);
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 12px; /* Reduced padding */
+    font-size: 15px; /* Slightly smaller */
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px; /* Reduced padding */
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .nav-home-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .nav-home-icon svg {
+    color: #888;
+  }
+  
+  .nav-pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Slightly reduced gap */
+  }
+  
+  .prev-btn, .next-btn {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 16px; /* Slightly smaller */
+    padding: 5px;
+  }
+  
+  .page-indicator {
+    font-size: 13px; /* Slightly smaller */
+    color: #666;
+  }

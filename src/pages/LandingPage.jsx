@@ -1,8 +1,10 @@
-// LandingPage.jsx
 import React from 'react';
-import './LandingPage.css'; // You'll need to create this CSS file
+import './LandingPage.css';
 
 function LandingPage({ navigateTo }) {
+  const totalPages = 4;
+  const currentPage = 1; // Landing page is page 1
+
   return (
     <div className="landing-container">
       <div className="landing-content">
@@ -10,32 +12,59 @@ function LandingPage({ navigateTo }) {
         <p className="landing-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        
-        <button 
+
+        <button
           className="primary-button"
           onClick={() => navigateTo('signup')}
         >
           Create Account
         </button>
-        
-        <button 
+
+        <button
           className="secondary-button"
           onClick={() => navigateTo('login')}
         >
           Already Registered? Login
         </button>
       </div>
-      
+
       <div className="page-navigation">
-        <div className="nav-home-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <div
+          className="nav-home-icon"
+          onClick={() => navigateTo('landing')}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           </svg>
         </div>
+
         <div className="nav-pagination">
-          <button className="prev-btn">&lt;</button>
-          <span className="page-indicator">1 of 4</span>
-          <button className="next-btn">&gt;</button>
+          <button
+            className="prev-btn"
+            onClick={() => navigateTo('landing')}
+            disabled={currentPage === 1}
+          >
+            &lt;
+          </button>
+
+          <span className="page-indicator">{currentPage} of {totalPages}</span>
+
+          <button
+            className="next-btn"
+            onClick={() => navigateTo('login')}
+          >
+            &gt;
+          </button>
         </div>
       </div>
     </div>
